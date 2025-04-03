@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,28 +8,27 @@
   <title>Leonardo Amaro</title>
 </head>
 
-<body class="bg-white max-w-7xl mx-auto">
-  <header>
-    <nav class="sticky top-0 flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+<body>
+  <header id="home" class="sticky top-0 z-50 shadow-md">
+    <nav class="flex items-center justify-between p-6 lg:px-8 bg-white" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Leonardo Amaro Portfolio</span>
           <h1 class="text-2xl font-bold">Leo.</h1>
         </a>
       </div>
-      <div class="flex lg:hidden">
+      <!-- <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
           <span class="sr-only">Open main menu</span>
-          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            aria-hidden="true" data-slot="icon">
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
-      </div>
+      </div> -->
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Home</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Projects</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">About Me</a>
+        <a href="#home" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Home</a>
+        <a href="#projects" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Projects</a>
+        <a href="#skills" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">About Me</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="#"
@@ -37,40 +36,6 @@
           Me</a>
       </div>
     </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div class="fixed inset-0 z-50"></div>
-      <div
-        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-          </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              aria-hidden="true" data-slot="icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
-              <a href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Projects</a>
-              <a href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About
-                Me</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </header>
   <div class="flex h-[calc(100vh-150px)] items-center">
     <div class="relative isolate px-6 lg:px-8">
@@ -91,7 +56,7 @@
         </div> -->
         <div>
           <h2 class="font-semibold tracking-tight text-gray-900 sm:text-5xl mb-8">Hello,</h2>
-          <h1 class="text-balance text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">I'm Leo</h1>
+          <h2 class="text-balance text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">I'm Leo</h2>
           <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Anim aute id magna aliqua ad ad non
             deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
           <div class="mt-10 flex items-center gap-x-6">
@@ -114,8 +79,8 @@
     </div>
   </div>
   <!-- Skill section -->
-  <div class="flex flex-col items-center justify-center min-h-screen">
-    <h1 class="text-2xl font-bold mb-8">My Tech Stack</h1>
+  <div id="skills" class="flex flex-col items-center justify-center min-h-screen">
+    <h2 class="text-2xl font-bold mb-8">My Tech Stack</h2>
     <div class="flex flex-wrap gap-8 justify-center max-w-[600px]">
       <div class="flex flex-col items-center">
         <img src="/src/assets/img/html5.png" alt="html 5" class="w-16 h-16" />
@@ -156,6 +121,27 @@
       <div class="flex flex-col items-center">
         <img src="/src/assets/img/java.png" alt="java" class="w-16 h-16" />
         <p>Java</p>
+      </div>
+    </div>
+  </div>
+  <!-- Project section -->
+  <div id="projects" class="flex flex-col items-center justify-center min-h-screen">
+    <div class="flex flex-col items-center mb-8">
+      <h2 class="text-2xl font-bold mb-8">Projects</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus amet veritatis
+        autem
+        dolor, neque, adipisci ea vel nobis harum porro quibusdam earum voluptates incidunt nesciunt sunt.</p>
+    </div>
+    <div class="flex">
+      <div>
+        <img src="/src/assets/img/aia-ph.png" alt="AIA Philippines">
+      </div>
+      <div>
+        <h2>Insurance Company</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus amet veritatis
+          autem
+          dolor, neque, adipisci ea vel nobis harum porro quibusdam earum voluptates incidunt nesciunt sunt.</p>
+        <a href="https://www.aia.com.ph/en" target="_blank" class="text-indigo-600">View website</a>
       </div>
     </div>
   </div>

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header id="home" class="sticky top-0 z-50 shadow-md">
+  <header class="sticky top-0 z-50 shadow-md">
     <nav class="flex items-center justify-between p-6 lg:px-8 bg-white" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
@@ -17,14 +17,15 @@
           <h1 class="text-2xl font-bold">Leo.</h1>
         </a>
       </div>
-      <!-- <div class="flex lg:hidden">
+      <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
           <span class="sr-only">Open main menu</span>
-          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
-      </div> -->
+      </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="#home" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Home</a>
         <a href="#projects" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Projects</a>
@@ -37,23 +38,9 @@
       </div>
     </nav>
   </header>
-  <div class="flex h-[calc(100vh-150px)] items-center">
+  <div id="home" class="flex h-[calc(100vh-150px)] items-center justify-center">
     <div class="relative isolate px-6 lg:px-8">
-      <!-- <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true">
-        <div
-          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-        </div>
-      </div> -->
       <div class="flex justify-between items-center gap-x-6">
-        <!-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div
-            class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
-                class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </div> -->
         <div>
           <h2 class="font-semibold tracking-tight text-gray-900 sm:text-5xl mb-8">Hello,</h2>
           <h2 class="text-balance text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">I'm Leo</h2>
@@ -68,19 +55,11 @@
         </div>
         <div><img src="/src/assets/img/qr.png" alt="qr code" class="max-w-[360px]"></div>
       </div>
-      <!-- <div
-        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true">
-        <div
-          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-        </div>
-      </div> -->
     </div>
   </div>
   <!-- Skill section -->
   <div id="skills" class="flex flex-col items-center justify-center min-h-screen">
-    <h2 class="text-2xl font-bold mb-8">My Tech Stack</h2>
+    <h2 class="text-4xl font-bold mb-16">My Tech Stack</h2>
     <div class="flex flex-wrap gap-8 justify-center max-w-[600px]">
       <div class="flex flex-col items-center">
         <img src="/src/assets/img/html5.png" alt="html 5" class="w-16 h-16" />
@@ -125,23 +104,85 @@
     </div>
   </div>
   <!-- Project section -->
-  <div id="projects" class="flex flex-col items-center justify-center min-h-screen">
-    <div class="flex flex-col items-center mb-8">
-      <h2 class="text-2xl font-bold mb-8">Projects</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus amet veritatis
-        autem
-        dolor, neque, adipisci ea vel nobis harum porro quibusdam earum voluptates incidunt nesciunt sunt.</p>
+  <div id="projects" class="flex flex-col items-center justify-center pt-32">
+    <div class="flex flex-col items-center gap-10 text-center w-1/2 mb-16">
+      <h2 class="text-4xl font-bold">Projects</h2>
+      <p>Here are some of the projects I've built to showcase my front-end development skills. Each one reflects my
+        passion for clean code, responsive design, and user-friendly experiences. From interactive web apps to dynamic
+        interfaces, I’ve leveraged modern technologies like HTML, CSS, JavaScript, and React to bring ideas to life.
+        Explore my work to see how I solve problems creatively and deliver seamless digital experiences.</p>
     </div>
-    <div class="flex">
-      <div>
-        <img src="/src/assets/img/aia-ph.png" alt="AIA Philippines">
+    <div class="flex justify-center gap-8 mb-16">
+      <div class="flex">
+        <img class="flex-1 w-100" src="/src/assets/img/aia-ph.png" alt="AIA Philippines">
       </div>
-      <div>
-        <h2>Insurance Company</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus amet veritatis
+      <div class="flex flex-col justify-center w-1/2 bg-white">
+        <h2 class="mb-8 font-semibold text-2xl">Insurance Company</h2>
+        <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus
+          amet veritatis
           autem
           dolor, neque, adipisci ea vel nobis harum porro quibusdam earum voluptates incidunt nesciunt sunt.</p>
-        <a href="https://www.aia.com.ph/en" target="_blank" class="text-indigo-600">View website</a>
+        <a href="https://www.aia.com.ph/en" target="_blank" class="inline-block">
+          <button
+            class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 active:bg-blue-600 transition duration-300">
+            View website
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-center gap-8 mb-16">
+      <div class="flex flex-col justify-center w-1/2 bg-white">
+        <h2 class="mb-8 font-semibold text-2xl">Insurance Company</h2>
+        <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus
+          amet veritatis
+          autem
+          dolor, neque, adipisci ea vel nobis harum porro quibusdam earum voluptates incidunt nesciunt sunt.</p>
+        <a href="https://www.bpi-aia.com.ph/en" target="_blank" class="inline-block">
+          <button
+            class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 active:bg-blue-600 transition duration-300">
+            View website
+          </button>
+        </a>
+      </div>
+      <div class="flex">
+        <img class="flex-1 w-100" src="/src/assets/img/bpi-aia.png" alt="BPI AIA Philippines">
+      </div>
+    </div>
+    </div>
+    <div class="flex justify-center gap-8 mb-16">
+      <div class="flex">
+        <img class="flex-1 w-100" src="/src/assets/img/globe-telecom.png" alt="Globe Telecom">
+      </div>
+      <div class="flex flex-col justify-center w-1/2 bg-white">
+        <h2 class="mb-8 font-semibold text-2xl">Telecom</h2>
+        <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus
+          amet veritatis
+          autem
+          dolor, neque, adipisci ea vel nobis harum porro quibusdam earum voluptates incidunt nesciunt sunt.</p>
+        <a href="https://www.globe.com.ph/business" target="_blank" class="inline-block">
+          <button
+            class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 active:bg-blue-600 transition duration-300">
+            View website
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-center gap-8 mb-16">
+      <div class="flex flex-col justify-center w-1/2 bg-white">
+        <h2 class="mb-8 font-semibold text-2xl">Bank</h2>
+        <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi eum unde doloribus
+          amet veritatis
+          autem
+          dolor, neque, adipisci ea vel nobis harum porro quibusdam earum voluptates incidunt nesciunt sunt.</p>
+        <a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank" class="inline-block">
+          <button
+            class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 active:bg-blue-600 transition duration-300">
+            View website
+          </button>
+        </a>
+      </div>
+      <div class="flex">
+        <img class="flex-1 w-100" src="/src/assets/img/hong-leong-bank.png" alt="Hong Leong Bank">
       </div>
     </div>
   </div>

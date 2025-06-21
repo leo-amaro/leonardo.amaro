@@ -141,8 +141,8 @@ const Hero = () => {
             <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
                 <li className="mr-5 text-xs shrink-0">
                     <MagneticButton
-                        className="block hover:text-slate-200 bg-transparent border-none p-0 transition-colors duration-300"
-                        onClick={() => window.open('https://github.com/leonardo-amaro', '_blank')}
+                        className="block hover:text-slate-200 bg-transparent border-none p-0 transition-colors duration-300 cursor-pointer"
+                        onClick={() => window.open('https://github.com/leo-amaro', '_blank')}
                         strength={0.4}
                         aria-label="GitHub (opens in a new tab)"
                         title="GitHub"
@@ -161,7 +161,7 @@ const Hero = () => {
                 </li>
                 <li className="mr-5 text-xs shrink-0">
                     <MagneticButton
-                        className="block hover:text-slate-200 bg-transparent border-none p-0 transition-colors duration-300"
+                        className="block hover:text-slate-200 bg-transparent border-none p-0 transition-colors duration-300 cursor-pointer"
                         onClick={() => window.open('https://linkedin.com/in/leo-amaro', '_blank')}
                         strength={0.4}
                         aria-label="LinkedIn (opens in a new tab)"
@@ -181,7 +181,7 @@ const Hero = () => {
                 </li>
                 <li className="mr-5 text-xs shrink-0">
                     <MagneticButton
-                        className="block hover:text-slate-200 bg-transparent border-none p-0 transition-colors duration-300"
+                        className="block hover:text-slate-200 bg-transparent border-none p-0 transition-colors duration-300 cursor-pointer"
                         onClick={() => window.location.href = 'mailto:leonardo@example.com'}
                         strength={0.4}
                         aria-label="Email (opens in a new tab)"

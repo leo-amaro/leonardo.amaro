@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Typewriter from './animations/Typewriter';
 import StaggeredFadeIn from './animations/StaggeredFadeIn';
 import MagneticButton from './animations/MagneticButton';
+import BlurText from './animations/BlurText';
 
 const Hero = () => {
     const [activeSection, setActiveSection] = useState('about');
@@ -12,10 +13,10 @@ const Hero = () => {
         const handleScroll = () => {
             const sections = ['about', 'experience', 'projects'];
             const scrollPosition = window.scrollY + 200; // Add offset for better detection
-            
+
             // Find the current section based on scroll position
             let current = 'about'; // default to first section
-            
+
             sections.forEach(sectionId => {
                 const element = document.getElementById(sectionId);
                 if (element) {
@@ -25,13 +26,13 @@ const Hero = () => {
                     }
                 }
             });
-            
+
             setActiveSection(current);
         };
 
         // Set initial state
         handleScroll();
-        
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -49,13 +50,17 @@ const Hero = () => {
         setTimeout(() => setShowDescription(true), 800);
     };
 
+    const handleAnimationComplete = () => {
+        console.log('Animation completed!');
+    };
+
     return (
         <div>
             <div>
                 <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
                     <a href="/">
-                        <Typewriter 
-                            text="Leonardo Amaro" 
+                        <Typewriter
+                            text="Leonardo Amaro"
                             speed={80}
                             delay={500}
                             onComplete={handleNameComplete}
@@ -65,9 +70,14 @@ const Hero = () => {
                 </h1>
                 <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
                     {showTitle && (
-                        <span className="transition-opacity duration-700 opacity-100">
-                            Front End Developer
-                        </span>
+                        <BlurText
+                            text="Front End Developer"
+                            delay={150}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}
+                            className="text-2xl mb-8"
+                        />
                     )}
                 </h2>
                 <p className="mt-4 max-w-xs leading-normal text-slate-400">

@@ -1,0 +1,181 @@
+LEONARDO AMARO
+Frontend Developer & AEM Specialist
+
+Email: leo.munoz.amaro@gmail.com
+Available for Remote/Hybrid Work
+LinkedIn: linkedin.com/in/leo-amaro
+GitHub: github.com/leo-amaro
+Portfolio: leonardo-amaro.dev
+
+---
+
+PROFESSIONAL SUMMARY
+
+Senior Frontend Developer with 8+ years of comprehensive web development experience, specializing in enterprise-scale applications and Adobe Experience Manager (AEM) implementations. Proven track record of leading international development teams and delivering high-impact solutions for major global brands including AIA Philippines, Hong Leong Bank Malaysia, and Ford Australia. Expert in modern web technologies with demonstrated ability to achieve measurable business results through technical optimization and strategic implementations.
+
+---
+
+KEY ACHIEVEMENTS & IMPACT
+
+• Performance Excellence: Delivered 45% performance improvements and 30% increase in website visitors across enterprise platforms
+• Team Leadership: Successfully led international development teams of 9 members across Philippines and Malaysia
+• Enterprise Scale: Managed 15+ website migrations for Fortune 500 companies including AIA, Hong Leong Bank, and Ford
+• Process Optimization: Reduced content migration time by 40% through innovative workflow improvements
+• Quality Standards: Maintained 99.5% content quality compliance for global brand requirements
+• Mentorship Impact: Improved team productivity by 25% through junior developer mentoring programs
+
+---
+
+PROFESSIONAL EXPERIENCE
+
+Frontend Developer & Consultant | Freelance / Professional Development
+2023 — Present
+
+Transitioned to freelance consulting while advancing technical skills through formal education at Conestoga College. Focused on modern frontend technologies, expanding expertise beyond AEM to include latest React/Vue.js frameworks and contemporary development practices.
+
+Key Achievements:
+• Completed comprehensive Web Development Program at Conestoga College
+• Expanded technical expertise in modern JavaScript frameworks and tools
+• Developed this portfolio using React, Vite, and Tailwind CSS
+• Maintained active GitHub presence with personal and learning projects
+
+Technologies: React, Vite, Tailwind CSS, Modern JavaScript, Git, Portfolio Development
+
+---
+
+AEM Developer • Team Lead | GrowthOps
+2020 — 2023
+
+Advanced to AEM developer role, leading a team of 2 junior developers in a 9-member international project team to deliver enterprise-scale insurance websites. Customized single-source AEM components and templates from AIA's global framework to meet Philippines-specific business requirements.
+
+Key Achievements:
+• Achieved 30% increase in website visitors through technical optimizations
+• Delivered 45% performance improvements across all managed platforms
+• Recognized as reliable developer for managing complex mid-project changes
+• Led implementation of country-specific product displays and lead capture forms
+• Integrated Adobe Analytics for enhanced user preference tracking
+• Mentored 2 junior developers, improving team productivity by 25%
+• Collaborated effectively across time zones with Malaysia-based senior developers
+
+Notable Projects:
+• AIA Philippines (https://www.aia.com.ph/en)
+• BPI AIA (https://www.bpi-aia.com.ph/en)
+
+Technologies: React, JavaScript ES6+, Bootstrap 5, SASS, Storybook, AEM Components, Adobe Analytics, Team Leadership, Agile/Scrum
+
+---
+
+Web Publisher • Content Population Specialist | GrowthOps
+2015 — 2020
+
+Specialized in web content population and migration for international banking and automotive clients, transitioning websites from legacy systems to Adobe Experience Manager (AEM). Managed content population workflows for enterprise-scale projects, ensuring brand consistency across global digital platforms.
+
+Key Achievements:
+• Successfully migrated 15+ enterprise websites to AEM platform
+• Developed expertise in AEM authoring and content management workflows
+• Collaborated with international development teams across Malaysia and Philippines
+• Maintained 99.5% content quality standards for global brand compliance
+• Reduced content migration time by 40% through process optimization
+• Trained new team members on AEM best practices and workflows
+
+Notable Projects:
+• Hong Leong Bank Malaysia (https://www.hlb.com.my/en/personal-banking/home.html)
+• Ford Australia (https://www.ford.com.au/)
+• Globe Business Philippines (https://www.globe.com.ph/business)
+
+Technologies: Adobe Experience Manager, HTML5, CSS3, JavaScript, HTL, Content Migration, Process Optimization, Quality Assurance
+
+---
+
+TECHNICAL SKILLS
+
+Frontend Technologies:
+• React.js, Vue.js, Next.js
+• JavaScript (ES6+), TypeScript
+• HTML5, CSS3, SASS/SCSS
+• Bootstrap, Tailwind CSS, Material-UI
+• Responsive Design & Mobile-First Development
+• Performance Optimization & SEO
+
+Development Tools:
+• Adobe Experience Manager (AEM)
+• HTL (HTML Template Language)
+• Webpack, Vite, Babel
+• Git, GitHub, Bitbucket
+• Storybook, Figma
+• RESTful APIs & JSON
+
+Enterprise & CMS:
+• Component-based Architecture
+• Content Migration & DAM
+• Multi-site Management
+• Adobe Analytics Integration
+• CI/CD Pipelines
+• Apache Sling, OSGi Bundles
+
+Methodologies & Leadership:
+• Agile/Scrum, Kanban
+• Team Leadership & Mentoring
+• Code Review & Quality Assurance
+• Cross-browser Testing
+• International Team Coordination
+• Jira, Confluence, Slack
+
+---
+
+EDUCATION
+
+Web Development Program | Conestoga College, Ontario, Canada
+2023 — 2024
+
+Comprehensive full-stack development program covering modern web technologies, frameworks, and industry best practices. Focus on React.js, Node.js, databases, and enterprise development methodologies.
+
+Bachelor of Science in Computer Science | Asian Institute of Computer Studies, Philippines
+2008
+
+Foundation in computer science principles, programming fundamentals, data structures, algorithms, and software development lifecycle.
+
+---
+
+CERTIFICATIONS & PROFESSIONAL DEVELOPMENT
+
+• Professional Scrum Master I (PSM I) - Scrum.org (2023)
+  Verification: scrum.org/user/1069144
+
+• HTML, CSS, and JavaScript for Web Developers - Coursera (2022)
+  Johns Hopkins University Specialization
+
+• Vue.js Complete Developer Course - Coursera (2021)
+  University of California, Davis
+
+• Web Development Program - Conestoga College (2023-2024)
+  Full-stack development with modern frameworks
+
+---
+
+LANGUAGES & ADDITIONAL INFORMATION
+
+Languages:
+• English - Fluent (Professional)
+• Filipino/Tagalog - Native
+
+Work Authorization:
+• Available for Remote Work
+• Open to Hybrid Arrangements
+• International Team Experience
+
+Professional Interests:
+• Web Performance Optimization
+• Accessibility (WCAG Standards)
+• Modern Framework Adoption
+• Team Development & Mentoring
+
+---
+
+CONTACT & PORTFOLIO
+
+🌐 Portfolio: leonardo-amaro.dev
+💼 LinkedIn: linkedin.com/in/leo-amaro
+🔗 GitHub: github.com/leonardo-amaro
+
+Available for frontend development opportunities • Remote & hybrid-friendly • Ready to contribute to your team's success 

@@ -34,7 +34,7 @@ export default function About() {
 
                 <ScrollReveal delay={700} className="mb-4">
                     <p className="text-slate-300 leading-relaxed">
-                        I've had the opportunity to work on <span className="text-slate-200 font-medium">high-profile projects</span> across diverse industries — from international banking and automotive platforms to insurance and financial services, and telecommunications. My expertise spans{' '}
+                        I've had the opportunity to work on <span className="text-teal-300 font-medium">high-profile projects</span> across diverse industries — from international banking and automotive platforms to insurance and financial services, and telecommunications. My expertise spans{' '}
                         <AnimatedLink 
                             href="https://www.aia.com.ph/en"
                             ariaLabel="AIA Philippines (opens in a new tab)"
@@ -75,7 +75,7 @@ export default function About() {
 
                 <ScrollReveal delay={900}>
                     <p className="text-slate-300 leading-relaxed">
-                        When I'm not at the computer, I enjoy spending quality time with my family, playing <span className="text-teal-300">basketball</span>, reading about new technologies in both software and hardware, and learning new tech stacks to stay current with the evolving development landscape.
+                        When I'm not at the computer, I enjoy spending quality time with my family, playing basketball, reading about new technologies in both software and hardware, and learning new tech stacks to stay current with the evolving development landscape.
                     </p>
                 </ScrollReveal>
             </div>

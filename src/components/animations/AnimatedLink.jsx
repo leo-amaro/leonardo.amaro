@@ -14,7 +14,7 @@ const AnimatedLink = ({
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseMove = (e) => {
-    if (!linkRef.current) return;
+    if (!linkRef.current || window.innerWidth < 768) return; // Only apply magnetic effect on desktop
 
     const rect = linkRef.current.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
@@ -51,10 +51,12 @@ const AnimatedLink = ({
       rel={rel}
       aria-label={ariaLabel}
       className={`
-        relative inline-block font-medium text-slate-200 
+        relative inline-block font-medium text-teal-300
         transition-all duration-300 ease-out
-        hover:text-teal-300 focus-visible:text-teal-300
-        group
+        hover:text-teal-200 active:text-teal-400
+        focus-visible:text-teal-200 focus-visible:outline-none
+        group cursor-pointer
+        active:scale-95 md:active:scale-100
         ${className}
       `}
       style={{
@@ -67,9 +69,10 @@ const AnimatedLink = ({
       {/* Background glow effect */}
       <span 
         className={`
-          absolute inset-0 rounded-md bg-teal-400/10 blur-sm 
+          absolute inset-0 rounded-md bg-teal-400/20 blur-sm 
           transition-all duration-300 -z-10
           ${isHovered ? 'opacity-100 scale-110' : 'opacity-0 scale-100'}
+          md:bg-teal-400/10
         `}
       />
       
@@ -81,6 +84,7 @@ const AnimatedLink = ({
             absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-teal-400 to-cyan-400
             transition-all duration-300 ease-out
             ${isHovered ? 'w-full opacity-100' : 'w-0 opacity-70'}
+            md:h-0.5 h-[1px]
           `}
         />
       </span>

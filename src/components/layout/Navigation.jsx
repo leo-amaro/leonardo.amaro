@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import MagneticButton from './animations/MagneticButton';
+import MagneticButton from '../ui/animations/MagneticButton';
 
 const Navigation = () => {
     const [activeSection, setActiveSection] = useState('about');

@@ -1,6 +1,6 @@
-import ScrollReveal from './animations/ScrollReveal';
-import AnimatedLink from './animations/AnimatedLink';
-import SectionHeader from './animations/SectionHeader';
+import ScrollReveal from '../ui/animations/ScrollReveal';
+import AnimatedLink from '../ui/animations/AnimatedLink';
+import SectionHeader from '../common/SectionHeader';
 
 export default function About() {
     return (

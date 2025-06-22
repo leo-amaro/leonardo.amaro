@@ -1,4 +1,4 @@
-import MagneticButton from './animations/MagneticButton';
+import MagneticButton from '../ui/animations/MagneticButton';
 
 const SocialLinks = () => {
     const socialLinks = [

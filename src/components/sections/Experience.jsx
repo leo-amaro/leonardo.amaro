@@ -1,6 +1,6 @@
 // Example: Experience.jsx
-import TimelineItem from './animations/TimelineItem';
-import TimelineHeader from './animations/TimelineHeader';
+import TimelineItem from '../common/TimelineItem';
+import TimelineHeader from '../common/TimelineHeader';
 
 export default function Experience() {
     // Reorganized experiences in chronological order (most recent first)

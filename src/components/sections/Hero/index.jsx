@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import Navigation from './Navigation';
-import HeroContent from './animations/HeroContent';
-import SocialLinks from './SocialLinks';
-import FadeIn from './animations/FadeIn';
+import Navigation from '../../layout/Navigation';
+import HeroContent from './HeroContent';
+import SocialLinks from '../../layout/SocialLinks';
+import FadeIn from '../../ui/animations/FadeIn';
 
 const Hero = () => {
     const [showTitle, setShowTitle] = useState(false);
@@ -68,4 +68,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Hero; 

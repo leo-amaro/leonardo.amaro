@@ -182,7 +182,7 @@ const Hero = () => {
                 <li className="mr-5 text-xs shrink-0">
                     <MagneticButton
                         className="block hover:text-slate-200 bg-transparent border-none p-0 transition-colors duration-300 cursor-pointer"
-                        onClick={() => window.location.href = 'mailto:leonardo@example.com'}
+                        onClick={() => window.location.href = 'mailto:leo.munoz.amaro@gmail.com'}
                         strength={0.4}
                         aria-label="Email (opens in a new tab)"
                         title="Email"

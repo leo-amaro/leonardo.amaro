@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import Typewriter from './animations/Typewriter';
-import StaggeredFadeIn from './animations/StaggeredFadeIn';
 import Navigation from './Navigation';
+import HeroContent from './animations/HeroContent';
 import SocialLinks from './SocialLinks';
-import BlurText from './animations/BlurText';
+import FadeIn from './animations/FadeIn';
 
 const Hero = () => {
     const [showTitle, setShowTitle] = useState(false);
     const [showDescription, setShowDescription] = useState(false);
+    const [showSocial, setShowSocial] = useState(false);
+    const [showNav, setShowNav] = useState(false);
 
     const handleNameComplete = () => {
         setShowTitle(true);
@@ -15,54 +16,53 @@ const Hero = () => {
         setTimeout(() => setShowDescription(true), 800);
     };
 
+    useEffect(() => {
+        // Show social links after description is shown
+        if (showDescription) {
+            setTimeout(() => setShowSocial(true), 1000);
+        }
+    }, [showDescription]);
+
+    useEffect(() => {
+        // Show navigation after social links appear
+        if (showSocial) {
+            setTimeout(() => setShowNav(true), 500);
+        }
+    }, [showSocial]);
+
     const handleAnimationComplete = () => {
         console.log('Animation completed!');
     };
 
     return (
-        <div className="min-h-screen lg:min-h-0 flex flex-col lg:block">
-            {/* Main Content */}
-            <div className="flex-1 flex flex-col justify-center lg:justify-start lg:flex-none">
-                <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-                    <a href="/">
-                        <Typewriter
-                            text="Leonardo Amaro"
-                            speed={80}
-                            delay={500}
-                            onComplete={handleNameComplete}
-                            className="hover:text-white transition-colors duration-300"
-                        />
-                    </a>
-                </h1>
-                <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-                    {showTitle && (
-                        <BlurText
-                            text="Front End Developer"
-                            delay={150}
-                            animateBy="words"
-                            direction="top"
-                            onAnimationComplete={handleAnimationComplete}
-                            className="text-2xl mb-8"
-                        />
+        <div className="flex flex-col h-screen">
+            <div className="flex-1 flex flex-col relative px-6 lg:px-0">
+                <div className="flex-1 flex flex-col justify-center lg:justify-start">
+                    <HeroContent 
+                        showTitle={showTitle}
+                        showDescription={showDescription}
+                        handleNameComplete={handleNameComplete}
+                        handleAnimationComplete={handleAnimationComplete}
+                    />
+                    
+                    {/* Social Links Component */}
+                    {showSocial && (
+                        <FadeIn delay={500} duration={0.8}>
+                            <div className="py-8 flex justify-center lg:justify-start">
+                                <SocialLinks />
+                            </div>
+                        </FadeIn>
                     )}
-                </h2>
-                <p className="mt-4 max-w-xs leading-normal text-slate-400">
-                    {showDescription && (
-                        <StaggeredFadeIn delay={300} staggerDelay={50}>
-                            I build accessible, user-centric digital experiences for the web with 8 years of expertise in web development.
-                        </StaggeredFadeIn>
-                    )}
-                </p>
-                
-                {/* Navigation Component - Only on desktop */}
-                <div className="hidden lg:block">
-                    <Navigation />
+
+                    {/* Navigation Component - Only on desktop */}
+                    <div className="hidden lg:block">
+                        {showNav && (
+                            <FadeIn delay={200} duration={1}>
+                                <Navigation />
+                            </FadeIn>
+                        )}
+                    </div>
                 </div>
-            </div>
-            
-            {/* Social Links Component - Bottom on mobile, normal position on desktop */}
-            <div className="flex-shrink-0 mt-8 pb-20 lg:pb-0 lg:mt-8">
-                <SocialLinks />
             </div>
         </div>
     );

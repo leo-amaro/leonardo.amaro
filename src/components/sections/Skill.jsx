@@ -1,23 +1,52 @@
 // Example: Skills.jsx
 import { motion } from 'framer-motion';
+import ScrollReveal from '../ui/animations/ScrollReveal';
+import SectionHeader from '../common/SectionHeader';
 
 export default function Skills() {
     const technicalSkills = [
         {
             category: "Frontend Development",
-            skills: ["JavaScript (ES6+)", "React JS", "Vue JS", "HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "SASS"]
+            skills: [
+                "React JS",
+                "Next.js",
+                "Vue JS", 
+                "JavaScript (ES6+)",
+                "TypeScript",
+                "HTML5",
+                "CSS3",
+                "Tailwind CSS",
+                "Bootstrap",
+                "SASS"
+            ]
         },
         {
             category: "Content Management",
-            skills: ["Adobe Experience Manager (AEM)", "Vanilla JS", "HTL", "Java"]
+            skills: [
+                "Adobe Experience Manager (AEM)",
+                "Vanilla JS",
+                "HTL",
+                "Java"
+            ]
         },
         {
             category: "Database & Tools",
-            skills: ["SQL (MySQL)", "VS Code", "IntelliJ IDEA", "Git", "Chrome DevTools", "React Dev Tools"]
+            skills: [
+                "SQL (MySQL)",
+                "VS Code",
+                "IntelliJ IDEA",
+                "Git",
+                "Chrome DevTools",
+                "React Dev Tools"
+            ]
         },
         {
             category: "Design Tools",
-            skills: ["Figma", "Adobe XD", "Codepen"]
+            skills: [
+                "Figma",
+                "Adobe XD",
+                "Codepen"
+            ]
         }
     ];
 
@@ -31,90 +60,65 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-gray-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl font-bold text-white mb-4">Skills & Expertise</h2>
-                    <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                        A comprehensive toolkit built through 8 years of professional development experience
-                    </p>
-                </motion.div>
+        <section id="skills" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Skills and expertise">
+            {/* Mobile header */}
+            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                    Skills
+                </h2>
+            </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    {/* Technical Skills */}
-                    <div className="lg:col-span-2">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            viewport={{ once: true }}
-                        >
-                            <h3 className="text-2xl font-semibold text-white mb-8">Technical Skills</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                {technicalSkills.map((skillGroup, index) => (
-                                    <motion.div
-                                        key={skillGroup.category}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                        viewport={{ once: true }}
-                                        className="bg-gray-700/50 rounded-lg p-6 hover:bg-gray-700/70 transition-colors duration-300"
-                                    >
-                                        <h4 className="text-lg font-semibold text-teal-400 mb-4">
-                                            {skillGroup.category}
-                                        </h4>
+            {/* Section Header */}
+            <SectionHeader 
+                title="Skills & Expertise"
+                subtitle="A comprehensive toolkit built through years of experience"
+                className="lg:block"
+            />
+
+            <div className="space-y-10">
+                {/* Technical Skills */}
+                <div>
+                    <ScrollReveal>
+                        <h3 className="text-lg font-bold text-slate-200 mb-6">Technical Skills</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {technicalSkills.map((skillGroup, index) => (
+                                <ScrollReveal key={skillGroup.category} delay={index * 100}>
+                                    <div className="rounded-lg bg-slate-800/50 p-5 hover:bg-slate-800/70 transition-colors duration-300">
+                                        <h4 className="text-teal-300 font-medium mb-3">{skillGroup.category}</h4>
                                         <div className="flex flex-wrap gap-2">
-                                            {skillGroup.skills.map((skill, skillIndex) => (
-                                                <span
-                                                    key={skillIndex}
-                                                    className="bg-gray-600 text-gray-200 px-3 py-1 rounded-full text-sm font-medium hover:bg-teal-600 hover:text-white transition-colors duration-200"
+                                            {skillGroup.skills.map((skill) => (
+                                                <span 
+                                                    key={skill}
+                                                    className="px-3 py-1 text-sm font-medium bg-slate-700/50 text-slate-200 rounded-full hover:bg-teal-400/10 hover:text-teal-300 transition-colors duration-300"
                                                 >
                                                     {skill}
                                                 </span>
                                             ))}
                                         </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
+                                    </div>
+                                </ScrollReveal>
+                            ))}
+                        </div>
+                    </ScrollReveal>
+                </div>
 
-                    {/* Soft Skills */}
-                    <div className="lg:col-span-1">
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            viewport={{ once: true }}
-                        >
-                            <h3 className="text-2xl font-semibold text-white mb-8">Soft Skills</h3>
-                            <div className="bg-gray-700/50 rounded-lg p-6">
-                                <div className="space-y-4">
-                                    {softSkills.map((skill, index) => (
-                                        <motion.div
-                                            key={index}
-                                            initial={{ opacity: 0, x: 20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 }}
-                                            viewport={{ once: true }}
-                                            className="flex items-center space-x-3 group"
-                                        >
-                                            <div className="w-2 h-2 bg-teal-400 rounded-full group-hover:bg-teal-300 transition-colors duration-200"></div>
-                                            <span className="text-gray-200 group-hover:text-white transition-colors duration-200">
-                                                {skill}
-                                            </span>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
+                {/* Soft Skills */}
+                <div>
+                    <ScrollReveal>
+                        <h3 className="text-lg font-bold text-slate-200 mb-6">Soft Skills</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            {softSkills.map((skill, index) => (
+                                <ScrollReveal key={skill} delay={index * 100}>
+                                    <div className="flex items-center space-x-2 group">
+                                        <div className="w-2 h-2 rounded-full bg-teal-400/60 group-hover:bg-teal-300 transition-colors duration-300"></div>
+                                        <span className="text-slate-300 group-hover:text-teal-300 transition-colors duration-300">
+                                            {skill}
+                                        </span>
+                                    </div>
+                                </ScrollReveal>
+                            ))}
+                        </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </section>

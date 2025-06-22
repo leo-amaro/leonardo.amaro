@@ -59,7 +59,7 @@ const SocialLinks = () => {
     return (
         <ul className="flex items-center space-x-6 lg:ml-1 lg:mt-8" aria-label="Social media">
             {socialLinks.map((link) => (
-                <li key={link.id} className="text-slate-400 hover:text-slate-200 transition-colors duration-300">
+                <li key={link.id} className="text-slate-400 hover:text-teal-300 transition-colors duration-300">
                     <MagneticButton
                         className="block bg-transparent border-none p-0 cursor-pointer"
                         onClick={link.onClick}

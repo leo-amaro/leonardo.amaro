@@ -6,21 +6,24 @@ const Navigation = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['about', 'experience', 'projects'];
-            const scrollPosition = window.scrollY + 200; // Add offset for better detection
+            const sections = ['about', 'experience', 'skills', 'certifications'];
+            // Adjust offset to account for header height and give some breathing room
+            const scrollPosition = window.scrollY + window.innerHeight / 3;
             
             // Find the current section based on scroll position
-            let current = 'about'; // default to first section
+            let current = sections[0]; // default to first section
             
-            sections.forEach(sectionId => {
-                const element = document.getElementById(sectionId);
+            // Iterate in reverse to handle overlapping sections
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const element = document.getElementById(sections[i]);
                 if (element) {
                     const offsetTop = element.offsetTop;
                     if (scrollPosition >= offsetTop) {
-                        current = sectionId;
+                        current = sections[i];
+                        break;
                     }
                 }
-            });
+            }
             
             setActiveSection(current);
         };
@@ -28,30 +31,49 @@ const Navigation = () => {
         // Set initial state
         handleScroll();
         
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        // Debounce scroll handler for better performance
+        let timeoutId = null;
+        const debouncedHandleScroll = () => {
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(handleScroll, 100);
+        };
+        
+        window.addEventListener('scroll', debouncedHandleScroll);
+        return () => {
+            window.removeEventListener('scroll', debouncedHandleScroll);
+            if (timeoutId) clearTimeout(timeoutId);
+        };
     }, []);
 
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            const offset = 80; // Slightly reduced offset for better positioning
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
     };
 
     const navigationItems = [
         { id: 'about', label: 'About' },
         { id: 'experience', label: 'Experience' },
+        { id: 'skills', label: 'Skills' },
+        { id: 'certifications', label: 'Education' }
         // { id: 'projects', label: 'Projects' }
     ];
 
     return (
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
-            <ul className="mt-16 w-max">
+            <ul className="mt-12 w-max">
                 {navigationItems.map((item) => (
-                    <li key={item.id}>
+                    <li key={item.id} className="mb-6">
                         <MagneticButton
-                            className="group flex items-center py-3 bg-transparent border-none cursor-pointer"
+                            className="group flex items-center py-2 bg-transparent border-none cursor-pointer"
                             onClick={() => scrollToSection(item.id)}
                             strength={0.2}
                         >

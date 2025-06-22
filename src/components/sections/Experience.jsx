@@ -180,7 +180,7 @@ export default function Experience() {
             <div className="mt-12 text-center">
                 <a 
                     className="inline-flex items-center px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-teal-300 font-medium rounded-lg border border-slate-600 hover:border-teal-400/50 transition-all duration-300 group" 
-                    href="/amaro.leonardo.resume.portfolio.pdf" 
+                    href="/assets/documents/amaro.leonardo.resume.portfolio.pdf" 
                     target="_blank" 
                     rel="noreferrer noopener"
                 >
